@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA</title>
+    <link rel="icon" type="image/x-icon" href="ognasa.svg">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/11023667f3.js" crossorigin="anonymous">
+    </script>
+    <style>
+        /*.bgr{
+             border:2px solid green;
+            }*/
+        .dropdown{
+            position:relative
+        }
+        .dropdown-content{
+            position:absolute;
+            display:none;
+            background-color:black;
+            width:300px;
+            margin-top:15px;
+            right:0;
+            padding-left: 25px;
+            text-decoration:none;
+            text-align: left;
+            z-index:1;
+        }
+        .dropdown-ex{
+            position:absolute;
+            display:none;
+            left:0;
+            background-color:black;
+            width:98.7vw;
+            height:88.5vh;
+            margin-top:15px;
+            text-decoration:none;
+            z-index:1;
+        }
+        .dropdown:hover .fa-angle-down{
+            transform:rotate(180deg);
+        }
+        .dropdown:hover .dropdown-content{
+            display:block;
+        }
+        .dropdown:hover .dropdown-ex{
+            display:block;
+        }
+        li:hover .fa-solid{
+            color:rgb(153 27 27);
+        }
+    </style>
+</head>
+<body>
+    <!--Navigation Starts here-->
+    <nav class="bg-black" style="font-family: 'inter',sans-serif;">
+        <div class="bgr pt-3 pb-1 pr-4 grid grid-cols-5 gap-0 ">
+            <div class="bgr pt-2 col-span-2 ">
+                <button class="bgr pl-6 dropdown text-white text-[20px] h-[60px] w-[140px]"><div class="bgr focus:outline-none focus:ring focus:ring-blue-400 font-bold">Explore<i class='fas fa-chevron-circle-down ml-4 text-sm'></i></div>
+                    <div class="dropdown-ex text-white pl-4 pt-[40px]">
+                        <div class="grid grid-cols-4 gap-4 grid-flow-row pr-4">
+                            <div class="font-[500px] text-[18px] border-solid border-r-[1px] border-[#b9b9bb] border-opacity-[0.4]">
+                                <ul>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Home</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Missions</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Humans in Space</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Earth & Climate</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">The Solar System</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">The Universe</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Science</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Aeronautics</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Technology</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Learning Resources</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">About NASA</a></li>
+                                    <li class="mb-[12px] h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Español</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="text-left mt-[12px] mb-[12px] text-[#b9b9bb] font-semibold text-[14px]">FEATURED</div>
+                                <div>
+                                    <img class="w-full object-cover h-[370px]" style="object-position: 40% 100%;" src="geologist.webp" alt="geologist">
+                                </div>
+                                <div class="text-left mt-[20px] text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-0" style="font-family:'dm-mono',sans-serif">5 MIN READ</div>
+                                <div class="text-left mt-[15px] text-white font-semibold text-[19px] leading-[22px]" style="font-family:'inter',sans-serif;">NASA Geologist Paves the Way for Building on the Moon</div>
+                            </div>
+                            <div>
+                                <div class="mt-[44px]">
+                                    <img class="w-full object-cover h-[370px]" style="object-position: 40% 100%;" src="tomatoes.jpg" alt="Tomatoes">
+                                </div>
+                                <div class="text-left mt-[20px] text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-0" style="font-family:'dm-mono',sans-serif">4 MIN READ</div>
+                                <div class="text-left mt-[15px] text-white font-semibold text-[19px] leading-[22px]" style="font-family:'inter',sans-serif;">NASA: Una jugosa historia de tomates en la Estación Espacial Internacional</div>
+                            </div>
+                            <div>
+                                <div class="mt-[44px]">
+                                    <img class="w-full object-cover h-[370px]" style="object-position: 20% 100%;" src="ketchup.webp" alt="Ketchup">
+                                </div>
+                                <div class="text-left mt-[20px] text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-0" style="font-family:'dm-mono',sans-serif">3 MIN READ</div>
+                                <div class="text-left mt-[15px] text-white font-semibold text-[19px] leading-[22px]" style="font-family:'inter',sans-serif;">NASA: Let’s Ketchup on International Space Station Tomato Research</div>
+                            </div>
+                        </div>
+                    </div>
+                </button>
+                
+                <input type="text" name="search" class="focus:outline-none focus:ring focus:ring-blue-400  bg-black text-white border-solid p-1 border-[1px] border-gray-800 ml-3 pl-2" placeholder="Search..">
+            </div>
+            <div class="justify-self-center pb-2  ">
+                <button class="focus:outline-none focus:ring focus:ring-blue-400"><img src="ognasa.svg" alt="NASA Image" class="h-[65px] w-[65px] "></button>
+            </div>
+            <div class="text-white col-span-2 font-bold pt-2  ">
+                <div class=" flex gap-0 text-[20px]">
+                    <button class="dropdown justify-self-end focus:outline-none focus:ring focus:ring-blue-400  h-[60px] w-[200px]">News & Events<i class="fa-solid fa-angle-down text-white ml-2 text-sm"></i>
+                        <div class="dropdown-content text-white font-normal text-[18px]" style="font-family:'inter',sans-serif; ">
+                            <ul>
+                                <li class="mb-[40px] pt-[40px] font-semibold text-[25px]"><a href="#">News & Events <i class='text-red-500 fa-solid fa-circle-arrow-right ml-2'></i></a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">All NASA News</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Video Series on NASA+</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Podcasts</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Blogs</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Newsletters</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Social Media</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Media Resources</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Upcoming Launches & Landings</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Virtual Events</a></li>
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="dropdown justify-self-end focus:outline-none focus:ring focus:ring-blue-400  h-[60px] w-[170px]">Multimedia<i class="fa-solid fa-angle-down text-white ml-2 text-sm "></i>
+                        <div class="dropdown-content text-white font-normal text-[18px]" style="font-family:'inter',sans-serif; ">
+                            <ul>
+                                <li class="mb-[40px] pt-[40px] font-semibold text-[25px]"><a href="#">Multimedia<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2'></i></a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">NASA+</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Images</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">NASA TV</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Sounds and Ringtones</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Interactives</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">NASA Apps</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">Podcasts</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">e-Books</a></li>
+                                <li class="mb-4 h-[30px] w-fit hover:border-b-2 hover:border-dashed hover:border-white"><a href="#">STEM Multimedia</a></li>
+                            </ul>
+                        </div>
+                    </button>
+                    <button class="justify-self-center flex focus:outline-none focus:ring focus:ring-blue-400 h-[60px] w-[150px] pt-[14px] pl-4">NASA+<div class="border-solid justify-self-start ml-1 border-[1px] border-red-600 pb-1 pl-1 pr-1 mt-1 h-5 w-10 rounded-md font-semibold text-[13px] hover:bg-red-600 " >LIVE</div>
+                    </div></button>
+            </div>
+                
+    </div>
+    </nav>
+    <!--Navigation Ends here-->
+
+    <!--First Section Starts Here-->
+    <div class="relative">
+        <div class="relative">
+            <div class="bg-cover bg-no-repeat" style="background-image: url('scin.jpg'); background-position: 30% 28%;height:111vh;">
+            </div>
+            <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0) 100%) ; height:inherit"></div>
+        </div>
+        <div class="absolute inset-0 ml-6 mt-[26vh]">
+            <h1 class="text-white text-[82px] font-bold leading-[80px]">Pushing the<br>Limits</h1><br>
+            <p class="text-white text-[20px] font-semibold">In 2023, NASA continued to make the impossible possible while sharing our <br> story of discovery with the world.</p><br>
+            <button class="mb-[87px] text-white text-[26px] font-bold border-solid border-2 border-red-500 rounded-md bg-red-500 w-[160px] h-[50px] hover:bg-red-700 hover:border-red-700">Look Back</button>
+            <div class="grid grid-cols-3 gap-y-6 w-[1000px]">
+                <div class="border-b-[1px] border-solid border-[rgba(255,255,255,0.3)] w-[309px]"></div>
+                <div class="border-b-[1px] border-solid border-[rgba(255,255,255,0.3)] w-[309px]"></div>
+                <div class="border-b-[1px] border-solid border-[rgba(255,255,255,0.3)] w-[309px]"></div>          
+                <div class="text-white text-[12px]" style="font-family:dm-mono;letter-spacing:3px;">VIDEO</div>
+                <div class="text-white text-[12px]" style="font-family:dm-mono;letter-spacing:3px;">KENNEDY SPACE CENTER</div>
+                <div class="text-white text-[12px]" style="font-family:dm-mono;letter-spacing:3px;">AMES RESEARCH CENTER</div>
+                <div class="text-white font-semibold text-[20px]" style="font-family: 'inter',sans-serif;">NASA 2023<i class='fa-solid fa-circle-arrow-right ml-2' style="transform:rotate(315deg);"></i></div>
+                <div class="text-white font-semibold text-[20px]" style="font-family: 'inter',sans-serif;">Top Stories<i class='fa-solid fa-circle-arrow-right ml-2' style="transform:rotate(315deg);"></i></div>
+                <div class="text-white font-semibold text-[20px]" style="font-family: 'inter',sans-serif;">Silicon Valley Highlights<i class='fa-solid fa-circle-arrow-right ml-2' style="transform:rotate(315deg);"></i></div>
+            </div>
+
+        </div>
+    </div>
+    <!--First Section Ends Here-->
+
+    <!--Second Section Starts Here-->
+    <div class="p-[60px] h-[125vh]">
+        <div class="flex justify-between items-center mt-[20px] mb-[50px]" style="font-family:'inter',sans-serif;">
+            <div class= "font-bold w-[400px] tracking-[0.021em] text-[53px] ">Featured News</div>
+            <div class="font-black text-[22px] text-center ">More NASA News<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2' style="transform:rotate(315deg);"></i></div>
+        </div>
+        <div class="grid grid-cols-4 grid-row-2 gap-[14px] ">
+            <div class="relative col-span-2 row-span-2  ">
+                <img class="w-full h-full" src="bidden.webp">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%)"></div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-7 pt-[51%]" style="font-family:'dm-mono',sans-serif">2 MIN READ</div>
+                <div class="absolute inset-0 text-white font-bold text-[25px] pl-5 pr-4 pt-[54%] leading-[24px]" style="font-family:Public Sans Web,sans-serif;">NASA's Artemis II Crew Meet with President, VP at White House</div>
+                
+            </div>
+            <div class="relative row-span-2  ">
+                <img class="w-full h-full" src="second.webp">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%)"></div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-7 pt-[89%]" style="font-family:'dm-mono',sans-serif">5 MIN READ</div>
+                <div class="absolute inset-0 text-white font-bold text-[25px] pl-5 pr-5 pt-[96%] leading-[24px]" style="font-family:Public Sans Web,sans-serif;">NASA's Fermi Mission Creates 14-Year Time-Lapse of the Gamma-Ray Sky</div>
+            </div>
+            <div class="relative ">
+                <img src="third.webp">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%)"></div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-5 pt-[29%]" style="font-family:'dm-mono',sans-serif">3 MIN READ</div>
+                <div class="absolute inset-0 text-white font-bold text-[25px] pl-5 pr-4 pt-[35%] leading-[24px]" style="font-family:Public Sans Web,sans-serif;">NASA, Joby Pave the Way for Air Taxis in Busy Airports</div>
+            </div>
+            <div class="relative ">
+                <img  src="fourth.webp">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%)"></div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+                <div class="absolute inset-0 text-white tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] pl-5 pt-[21%]" style="font-family:'dm-mono',sans-serif">5 MIN READ</div>
+                <div class="absolute inset-0 text-white font-bold text-[25px] pl-5 pr-4 pt-[27%] leading-[24px]" style="font-family:Public Sans Web,sans-serif;">NASA, Partners Continue to Advance Space Tech on Suborbital Flights</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-4 mt-[20px]">
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="hubble.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">3 MIN READ</div>
+                <div class="font-bold ml-[10%] mt-[5%] pr-[29px]">NASA's Hubble Presents a Holiday Globe of Stars</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[32%]" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+            </div>
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="stars.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">4 MIN READ</div>
+                <div class="font-bold ml-[10%] mt-[5%] pr-[20px]">Sprightly Stars Illuminate ‘Christmas Tree Cluster’</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[32%]" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>IMAGE ARTICLE</div>
+            </div>
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="laser.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">5 MIN READ</div>
+                <div class="font-bold ml-[10%] mt-[5%] pr-[20px]">NASA's Tech Demo Streams First Video From Deep Space via Laser</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[38%]" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+            </div>
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="infra.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">4 MIN READ</div>
+                <div class="font-bold ml-[10%] mt-[5%] pr-[29px]">Mighty MURI brings the heat to test new longwave infrared radiometer</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[38%]" style="font-family:'dm-mono',sans-serif"><i class="fa-regular fa-bookmark "></i>ARTICLE</div>
+            </div>
+        </div>
+    </div>
+    <!--Second Section Ends Here-->
+
+    <!--Third Section Starts Here-->
+    <div class="relative h-[110vh]">
+        <div class="bg-cover bg-center h-full" style="background-image:url('story.webp');"></div>
+        <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+        <div class="ml-[20px]">
+            <div class="absolute inset-0 mt-[52px] text-white tracking-[4px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-star" style="color: #ffffff;"></i>FEATURED STORY</div>
+            <div class="absolute inset-7 text-white text-[65px] font-bold mt-[8%] mr-[50%] leading-[70px]" style="font-family: 'inter',sans-serif;">NASA's Fermi Mission Creates 14-Year Time-Lapse of the Gamma-Ray Sky</div>
+            <div class="absolute inset-7 text-white text-[20px] mt-[37%] mr-[50%] leading-[30px]" style="font-family: 'Public Sans Web',sans-serif;">The cosmos comes alive in an all-sky time-lapse movie made from 14 years of data acquired by NASA's Fermi Gamma-ray…</div>
+            <div class="absolute inset-7 font-bold text-[28px] text-white mt-[43%]" style="font-family:'inter',sans-serif;">Read the Story<i class='text-red-500 text-[20px] fa-solid fa-circle-arrow-right ml-2'></i></div>
+        </div>
+    </div>
+    <!--Third Section Ends Here-->
+
+    <!--Fourth Section Starts Here-->
+    <div class="relative h-[122vh] grid grid-cols-3 gap-0 pt-[80px] pl-[26px] pr-[26px]">
+        <div class="relative  pr-[52px] ">
+            <div class="absolute inset-0 mt-[80px] text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em]" style="font-family:'dm-mono',sans-serif">TODAY</div>
+            <div class="font-semibold mt-[27%] text-[50px] leading-[50px]" style="font-family:'inter',sans-serif">Image Of The Day</div>
+            <div class="text-black mt-[20%] font-semibold text-[25px] leading-[30px]" style="font-family:'inter',sans-serif;">Making Fire Sense on Monroe Mountain</div>
+            <div class="text-black mt-[4%] text-[18px]" style="font-family: 'Public Sans Web',sans-serif;">A high-intensity prescribed burn in south-central Utah will help restore the region's aspen trees. It could also improve the lives of people managing, fighting, and living with fire.Flames burn orange through green conifers and golden aspen on the slopes of Monroe Mountain in Utah's Fishlake National Forest, sending gray and brown smoke billowing into the sky in this image from Oct. 9, 2023.</div>
+            <div class="mt-2 font-bold text-[20px] text-left" style="font-family:'inter',sans-serif;">Browse Image Archieve<i class='text-red-500 text-[20px] fa-solid fa-circle-arrow-right ml-2' ></i></div>
+        </div>
+        <div class="relative ml-9 col-span-2 mb-[80px]">
+            <img src="fire.webp" alt="Fire">
+            <div class="mt-2 font-bold text-[20px] text-right" style="font-family:'inter',sans-serif;">View Image<i class='text-red-500 text-[20px] fa-solid fa-circle-arrow-right ml-2' ></i></div>
+            <div class="absolute inset-1 text-right mt-4 mr-2"><i class="fa-solid fa-download fa-border bg-blue-600 text-xl" style="color: #eee7e7;border-color:rgb(37 99 235);border-radius:50%;"></i></div>
+        </div>
+    </div>
+    <!--Fourth Section Ends Here-->
+
+    <!--Fifth Section Starts Here-->
+    <div class="relative h-[150vh] ">
+        <div class="bg-cover bg-center h-full" style="background-image:url('watch.jpg');">
+            <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+        </div>
+        <div class="absolute inset-0 p-[60px] pt-[20%]">
+            <div class="text-white font-extrabold text-[90px] leading-[80px]" style="font-family:'inter',sans-serif;">Earth <br> Information <br> Center</div>
+            <div class="text-white font-[550px] text-[20px] mt-[12vh] mr-[44vw] leading-[40px]" style="font-family:'inter',sans-serif;">Discover Earth as NASA sees it. Learn why this information matters to us all.</div>
+            <div class="text-white font-bold text-[25px] mt-[4vh]" style="font-family:'inter',sans-serif;">Explore<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2 text-[20px]' style="transform:rotate(315deg);"></i></div>
+        </div>
+    </div>
+    <!--Fifth Section Ends Here-->
+
+    <!--Sixth Section Starts Here-->
+    <div class="relative h-[130vh]">
+        <div class="flex justify-between m-[60px] pt-[10px] ">
+            <div class="text-[60px] font-bold">Latest News</div>
+            <div class="text-[30px] font-bold tracking-tight self-center">More NASA New Releases<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2 text-[20px]' style="transform:rotate(315deg);"></i></div>
+        </div>
+        <div class="grid grid-cols-5 gap-4 m-[60px] mb-0 h-[72vh] overflow-hidden ">
+            <div class="relative col-span-3 ">
+                <img class="h-full w-full object-cover object-center" src="north.webp" alt="North">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0) 100%) ; height:inherit"></div>
+                <div class="absolute inset-0 mt-[5px] text-white tracking-[4px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-book mr-2" style="color: #ffffff;"></i>NEWS RELEASE</div>
+                <div class="absolute inset-0 pl-7 text-white tracking-[3.5px] font-medium text-[0.7rem] mt-[50%] leading-[1em]" style="font-family:'dm-mono',sans-serif">2 MIN READ</div>
+                <div class="absolute inset-0 pl-7 text-white mt-[52%] font-semibold text-2xl tracking-wide"style="font-family:'inter',sans-serif;">NASA to Cover Northrop Grumman Cygnus Departure from Space Station</div>
+            </div>
+            <div class="relative col-span-2 ">
+                <img class="h-full w-full object-cover object-center" src="south.webp" alt="South">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0) 100%) ; height:inherit"></div>
+                <div class="absolute inset-0 mt-[5px] text-white tracking-[4px] font-medium text-[0.7rem] leading-[1em] p-7" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-book mr-2" style="color: #ffffff;"></i>NEWS RELEASE</div>
+                <div class="absolute inset-0 pl-7 text-white tracking-[3.5px] font-medium text-[0.7rem] mt-[75%] leading-[1em]" style="font-family:'dm-mono',sans-serif">1 MIN READ</div>
+                <div class="absolute inset-0 pl-7 text-white mt-[79%] font-semibold text-2xl tracking-wide"style="font-family:'inter',sans-serif;">NASA Glenn, Langley Award Administrative Support Contract</div>
+            </div>
+        </div>
+        <div class="grid grid-cols-3 m-[60px]">
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="p1.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">3 MIN READ</div>
+                <div class="font-bold ml-[30px] mt-[5%] pr-[29px]">NASA to Provide Coverage as Dragon Departs Station with Science</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[90px] pt-[10px]" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-book mr-2" style="color: #000000;"></i>NEWS RELEASE</div>
+            </div>
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="p2.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">2 MIN READ</div>
+                <div class="font-bold ml-[30px] mt-[5%] pr-[29px]">NASA Sets Coverage for White House National Space Council Meeting</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[90px] pt-[10px]" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-book mr-2" style="color: #000000;"></i>NEWS RELEASE</div>            </div>
+            <div class="relative flex h-[130px]  ">
+                <img class="border-solid border-0 rounded-full h-[90px] w-[90px] mt-2" src="p3.webp">
+                <div class="absolute inset-0 text-black tracking-[4px] font-medium text-[0.7rem] leading-[1em] pl-[120px]" style="font-family:'dm-mono',sans-serif">2 MIN READ</div>
+                <div class="font-bold ml-[30px] mt-[5%] pr-[29px]">NASA Awards Turbofan Engine Core Technology Demonstration Contract</div>
+                <div class="absolute inset-0 text-black tracking-[3.5px] font-medium text-[0.7rem] leading-[1em] ml-[121px] mt-[90px] pt-[10px]" style="font-family:'dm-mono',sans-serif"><i class="fa-solid fa-book mr-2" style="color: #000000;"></i>NEWS RELEASE</div>            </div>
+        </div>
+
+    </div>
+    <!--Sixth Section Ends Here-->
+
+    <!--Seventh Section Starts Here-->
+    <div class="relative h-[97vh]">
+        <div class="bg-cover bg-center" style="background-image:url('gal.webp');height:inherit">
+            <div class="p-[60px] pt-[120px] text-white w-[45vw]">
+            <div class="font-bold text-[65px] leading-[70px]" style="font-family:'inter',sans-serif;">Explore the Universe from your Inbox</div>
+            <div class="font-semibold text-xl mt-[40px] leading-[20px]" style="font-family:'Public Sans Web',sans-serif;">Stay up-to-date on the latest news from NASA–from Earth to the Moon, the Solar System and beyond.</div>
+            <div class="font-medium mt-[10px] text-xl" style="font-family:'Public Sans Web',sans-serif;">We'll never share your email address.</div>
+            <div class="mt-[40px] font-bold text-[25px]" style="font-family:'inter',sans-serif;"><button>Sign Up<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2 text-[20px]'></i></button></div>
+            </div>
+        </div>
+    </div>
+    <!--Seventh Section Ends Here-->
+
+    <!--Eight Section Starts Here-->
+    <div class="relative h-[115vh] m-[26px]">
+        <div class="tracking-[4px] font-medium text-[0.7rem] leading-[1em] pt-[30px] " style="font-family:'dm-mono',sans-serif">KEEP EXPLORING</div>
+        <div class="font-bold text-[40px] mt-[30px] mb-[40px]" style="font-family:'inter',sans-serif;">Discover More Topics From NASA</div>
+        <div class="grid grid-cols-4 gap-4 overflow-hidden h-[85vh]">
+            <div class="relative bg-cover bg-center" style="background-image:url('missions.webp');height:inherit">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+                <div class="absolute bottom-[30px] text-[32px] ml-[30px] font-bold text-white" style="font-family:'Public Sans Web',sans-serif;">Missions<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2 text-[27px]'></i></div>
+            </div>
+            <div class="relative bg-cover bg-center" style="background-image:url('humans.webp');height:inherit">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+                <div class="absolute bottom-[30px] font-bold text-white flex">
+                    <div class="text-[32px] ml-[30px]  leading-[30px]" style="font-family:'Public Sans Web',sans-serif;">Humans In Space</div>
+                    <i class='text-red-500 fa-solid fa-circle-arrow-right pl-2 pr-5 self-center text-[30px] '></i>
+                </div>
+            </div>
+            <div class="relative bg-cover bg-center" style="background-image:url('history.webp');height:inherit">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+                <div class="absolute bottom-[30px] font-bold text-white flex ">
+                    <div class="text-[32px] ml-[30px]  leading-[30px]" style="font-family:'Public Sans Web',sans-serif;">NASA History</div>
+                    <i class='text-red-500 fa-solid fa-circle-arrow-right pl-2 pr-5 self-center text-[30px] '></i>
+                </div>
+            </div>
+            <div class="relative bg-cover bg-center" style="background-image:url('value.webp');height:inherit">
+                <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(0,0,0,0.8)0%,rgba(0,0,0,0)100%);"></div>
+                <div class="absolute bottom-[30px] font-bold text-white flex ">
+                    <div class="text-[32px] ml-[30px] pr-[20px] leading-[30px]" style="font-family:'Public Sans Web',sans-serif;">Value of NASA</div>
+                    <i class='text-red-500 fa-solid fa-circle-arrow-right pl-2 pr-5 self-center text-[30px]'></i>
+                </div>
+            </div>          
+        </div>
+    </div>
+    <!--Eight Section Ends Here-->
+
+    <!--Footer Starts Here-->
+    <footer class="relative h-[110vh] bg-black p-[26px]">
+        <div class="flex mt-[26px] bgr flex-wrap">
+            <div class="bgr w-[390px]">
+                <button><img src="ognasa.svg" alt="NASA Image" class="h-[67px] w-[67px] "></button>
+                <div class="text-white font-bold mt-[40px] text-[24px] bgr leading-[30px]" style="font-family:'inter',sans-serif;box-sizing: border-box;"> <p>The National Aeronautics and Space Administration</p>  </div>
+                <div class="text-[#b9b9bb] mt-[25px]" style="font-family:'Public Sans Web',sans-serif">NASA explores the unknown in air and space, innovates for the benefit of humanity, and inspires the world through discovery.</div>
+                <div class="text-white mt-[25px] pb-[15px] font-medium h-[40px]" style="font-family:'inter',sans-serif;"><p class="w-[160px] hover:border-b-2 hover:border-dashed hover:border-white">About NASA's Mission</p></div>
+                <div class="text-white text-[17px] font-bold" style="font-family:'inter',sans-serif;">Join Us<i class='text-red-500 fa-solid fa-circle-arrow-right ml-2 text-[20px]'></i></div>
+            </div>
+            <div class="bgr grow">
+                <div class="grid grid-cols-3 grid-rows-5 grid-flow-col gap-3 bgr ml-[70px] h-[280] mt-[90px] justify-items-left w-[80%] font-[550px] text-white" style="font-family:'inter',sans-serif;">
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Home</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">News & Events</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Multimedia</p></div>
+                    <div class="h-[30px] flex"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">NASA+</p><button class="border-solidml-1 border-[1px] border-red-600 pb-1 pl-1 pr-1 h-5 w-10 rounded-md font-semibold text-[13px] hover:bg-red-600 " >LIVE</button></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Missions</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Humans in Space</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Earth & Climate</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">The Solar System</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">The Universe</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Science</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Aeronautics</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Technology</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Learning Resources</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">About NASA</p></div>
+                    <div class="h-[30px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">NASA en Español</p></div>
+                </div>
+            </div>
+            <div class="bgr w-[220px]">
+                <div class="text-[#b9b9bb] text-xl font-bold mt-[100px]" style="font-family:'Public Sans Web',sans-serif">Follow NASA</div>
+                <div class="flex mt-3 justify-around">
+                    <div class="bgr"><i class="fa-brands fa-facebook-f fa-border h-[32px] w-[32px] text-center p-[7px] text-[17px] bg-[#2e2e32]" style="color: #ffffff;border-radius:50%;border-color:#2e2e32;"></i></div>
+                    <div class="bgr"><i class="fa-brands fa-instagram fa-border h-[32px] w-[32px] text-center p-[8px] text-[17px] bg-[#2e2e32]" style="color: #ffffff;border-radius:50%;border-color:#2e2e32;display:flex;"></i></div>
+                    <div class="bgr"><i class="fa-brands fa-x-twitter fa-border h-[32px] w-[32px] text-center p-[7px] text-[17px] bg-[#2e2e32]" style="color: #ffffff;border-radius:50%;border-color:#2e2e32;"></i></div>
+                    <div class="bgr"><i class="fa-brands fa-youtube fa-border h-[32px] w-[32px] text-center p-[6px] text-[17px] bg-[#2e2e32]" style="color: #ffffff;border-radius:50%;border-color:#2e2e32;"></i></div>
+                </div>
+                <div class="mt-12 pb-[15px] bgr text-white font-semibold h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">More NASA Social Accounts</p></div>
+                <div class="text-white font-semibold bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">NASA Newsletter</p></div>
+
+            </div>
+        </div>
+        <div class="mt-[40px] mb-[40px] border-solid border-b-[1px] border-[#b9b9bb]">
+        </div>
+        <div class="flex flex-wrap text-[17px] text-[#b9b9bb] justify-around">
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Sitemap</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">For Media</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Privacy Policy</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">FOIA</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">No FEAR Act</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Office of the IG</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Budget & Annual Reports</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Agency Financial Reports</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Contact NASA</p></div>
+            <div class="bgr h-[40px]"><p class="w-fit hover:border-b-2 hover:border-dashed hover:border-white">Accessibility</p></div>
+        </div>
+        <div class="flex mt-[40px] text-[#b9b9bb]" style="font-family:'public sans web',sans-serif;">
+            <div>Page Last Updated: <b>Dec 22, 2023</b></div>
+            <div class="ml-[40px]">Page Editor:<b>Raviraj Gaikar</b></div>
+            <div class="ml-[40px]">Responsible NASA Official:<b>Brian Dunbar</b></div>
+        </div>
+    </footer>
+    <!--Footer Starts Here-->
+</body>
+</html>
